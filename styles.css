@@ -1,0 +1,125 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure body covers the full viewport height */
+}
+
+header {
+  background-color: #11a3e6;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+main {
+  flex: 1; /* Allow the main content to grow and fill the remaining space */
+  padding: 20px;
+}
+
+#upload-container {
+  margin-bottom: 20px;
+}
+
+#pdf-content {
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 300px;
+  overflow-y: auto;
+}
+
+.job-card {
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #11a3e6;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+#upload-container {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+#pdf-upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.custom-upload-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4ee76f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.custom-upload-btn:hover {
+  background-color: #1ccf28;
+}
+
+.job-card {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.job-description {
+  position: relative;
+}
+
+.upload-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.upload-btn:hover {
+  background-color: #2980b9;
+}
+
+#add-job-btn {
+  position: absolute;
+  top: 30px; /* Adjust the top position as needed */
+  right: 10px; /* Adjust the right position as needed */
+  background-color: #4ee76f; /* Green background color */
+  color: #fff;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Adjust padding as needed */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#add-job-btn:hover {
+  background-color: #1ccf28; /* Darker green background color on hover */
+}

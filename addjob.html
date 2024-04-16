@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Job - Skill Sync</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .card {
+        border: 1px solid #000;
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+        margin: 50px auto;
+      }
+      input[type="text"],
+      textarea {
+        width: calc(100% - 40px);
+        margin-bottom: 10px;
+        padding: 10px;
+      }
+      button {
+        background-color: #11a3e6;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0a7ab6;
+      }
+      header {
+        background-color: #11a3e6;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+      }
+      footer {
+        background-color: #11a3e6;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Skill Sync</h1>
+    </header>
+
+    <div class="card">
+      <h2>Add Job</h2>
+      <form id="job-form" action="#">
+        <label for="job-title">Job Title:</label><br />
+        <input type="text" id="job-title" name="job-title" required /><br />
+
+        <label for="job-description">Job Description:</label><br />
+        <textarea
+          id="job-description"
+          name="job-description"
+          rows="4"
+          required
+        ></textarea
+        ><br />
+
+        <label for="job-location">Job Location:</label><br />
+        <input
+          type="text"
+          id="job-location"
+          name="job-location"
+          required
+        /><br />
+
+        <button type="submit">Submit</button>
+      </form>
+      <p id="success-msg" style="display: none; color: green">
+        Job added successfully!
+      </p>
+    </div>
+
+    <footer>
+      <p>© 2024 Skill Sync</p>
+    </footer>
+
+    <script>
+      document
+        .getElementById("job-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+          // You can add your logic here to handle form submission (e.g., sending data to a server)
+          // For now, just display the success message
+          document.getElementById("success-msg").style.display = "block";
+        });
+      document
+        .getElementById("job-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          // Retrieve job details from the form
+          var jobTitle = document.getElementById("job-title").value;
+          var jobDescription = document.getElementById("job-description").value;
+          var jobLocation = document.getElementById("job-location").value;
+
+          // Create a job object
+          var newJob = {
+            title: jobTitle,
+            description: jobDescription,
+            location: jobLocation,
+          };
+
+          // Get the existing jobs from localStorage
+          var existingJobs = JSON.parse(localStorage.getItem("jobs")) || [];
+
+          // Add the new job to the existing jobs array
+          existingJobs.push(newJob);
+
+          // Store the updated jobs array back in localStorage
+          localStorage.setItem("jobs", JSON.stringify(existingJobs));
+
+          // Show success message
+          document.getElementById("success-msg").style.display = "block";
+        });
+    </script>
+  </body>
+</html>

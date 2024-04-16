@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill Sync</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Include PDF.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <button id="add-job-btn">Add A Job</button>
+      <h1>Skill Sync</h1>
+    </header>
+
+    <main>
+      <div id="upload-container">
+        <label for="pdf-upload" class="custom-upload-btn">Choose File</label>
+        <input type="file" id="pdf-upload" accept=".pdf" />
+      </div>
+
+      <div class="job-card">
+        <h2>Frontend Developer</h2>
+        <p>
+          Description: Join our dynamic team to create innovative and
+          user-friendly web interfaces. You'll collaborate with designers to
+          implement responsive designs and optimize user experiences.
+        </p>
+        <p>Designation: Frontend Developer</p>
+        <p>Location: San Francisco, USA</p>
+        <button class="upload-btn">Apply</button>
+      </div>
+
+      <div class="job-card">
+        <h2>Data Analyst</h2>
+        <p>
+          Description: Analyze large datasets to extract valuable insights and
+          drive data-informed decisions. You'll work closely with stakeholders
+          to identify trends, develop reports, and implement data-driven
+          strategies.
+        </p>
+        <p>Designation: Data Analyst</p>
+        <p>Location: New York, USA</p>
+        <button class="upload-btn">Apply</button>
+      </div>
+
+      <div class="job-card">
+        <h2>Marketing Specialist</h2>
+        <p>
+          Description: Develop and execute marketing campaigns across various
+          channels to increase brand awareness and drive customer engagement.
+          You'll analyze market trends, conduct competitor research, and
+          optimize campaign performance.
+        </p>
+        <p>Designation: Marketing Specialist</p>
+        <p>Location: London, UK</p>
+        <button class="upload-btn">Apply</button>
+      </div>
+
+      <div class="job-card">
+        <h2>Software Engineer</h2>
+        <p>
+          Description: Design, develop, and maintain scalable software
+          solutions. You'll collaborate with cross-functional teams to deliver
+          high-quality code, participate in code reviews, and troubleshoot
+          technical issues.
+        </p>
+        <p>Designation: Software Engineer</p>
+        <p>Location: Bangalore, India</p>
+        <button class="upload-btn">Apply</button>
+      </div>
+
+      <div class="job-card">
+        <h2>UX/UI Designer</h2>
+        <p>
+          Description: Create intuitive and visually appealing user interfaces
+          that enhance user experience. You'll conduct user research, design
+          wireframes and prototypes, and collaborate with developers to
+          implement designs.
+        </p>
+        <p>Designation: UX/UI Designer</p>
+        <p>Location: Sydney, Australia</p>
+        <button class="upload-btn">Apply</button>
+      </div>
+
+      <div class="job-card">
+        <h2>Financial Analyst</h2>
+        <p>
+          Description: Provide financial insights and analysis to support
+          strategic decision-making. You'll analyze financial data, prepare
+          forecasts and reports, and evaluate investment opportunities.
+        </p>
+        <p>Designation: Financial Analyst</p>
+        <p>Location: Toronto, Canada</p>
+        <button class="upload-btn">Apply</button>
+      </div>
+
+      <div class="job-card">
+        <h2>Product Manager</h2>
+        <p>
+          Description: Lead the development and launch of new products from
+          concept to market. You'll define product requirements, prioritize
+          features, and collaborate with cross-functional teams to deliver
+          successful product releases.
+        </p>
+        <p>Designation: Product Manager</p>
+        <p>Location: Berlin, Germany</p>
+        <button class="upload-btn">Apply</button>
+      </div>
+
+      <div class="job-card">
+        <h2>HR Manager</h2>
+        <p>
+          Description: Oversee all aspects of human resources management,
+          including recruitment, employee relations, and performance management.
+          You'll develop HR policies, provide guidance to staff, and ensure
+          compliance with employment laws.
+        </p>
+        <p>Designation: HR Manager</p>
+        <p>Location: Paris, France</p>
+        <button class="upload-btn">Apply</button>
+      </div>
+
+      <div class="job-card">
+        <h2>Content Writer</h2>
+        <p>
+          Description: Create engaging and informative content across various
+          platforms, including blogs, social media, and marketing materials.
+          You'll research topics, write compelling copy, and adhere to brand
+          voice and style guidelines.
+        </p>
+        <p>Designation: Content Writer</p>
+        <p>Location: Cape Town, South Africa</p>
+        <button class="upload-btn">Apply</button>
+      </div>
+
+      <div class="job-card">
+        <h2>Network Engineer</h2>
+        <p>
+          Description: Design, implement, and manage network infrastructure to
+          ensure reliable connectivity and optimal performance. You'll
+          troubleshoot network issues, implement security measures, and stay
+          updated on industry best practices.
+        </p>
+        <p>Designation: Network Engineer</p>
+        <p>Location: Tokyo, Japan</p>
+        <button class="upload-btn">Apply</button>
+      </div>
+      <div id="new-jobs"></div>
+    </main>
+
+    <footer>
+      <p>© 2024 Skill Sync</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
